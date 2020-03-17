@@ -7,7 +7,14 @@
  */
 
 // Your code:
-
+function total(array) {
+    let sum = 0;
+    let mergedArray = [].concat(array);
+    for (let i=0 ; i<mergedArray.length ; i++) {
+        sum = sum + mergedArray[i];
+    }
+    return sum;
+}
 //* Begin of tests
 const assert = require('assert');
 
