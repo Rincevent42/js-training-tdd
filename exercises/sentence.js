@@ -8,6 +8,18 @@
 
 // Your code:
 
+function sentence (array) {
+  let line = '';
+  for (let i=0 ; i < array.length ; i++) {
+    line += array[i];
+    if (i < array.length -1) {
+      line += ' ';
+    }
+  }
+  return line;
+}
+
+
 //* Begin of tests
 const assert = require('assert');
 

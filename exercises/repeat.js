@@ -9,6 +9,16 @@
 
 // Your code:
 
+function repeat (string,number) {
+  let line = '';
+  if (number !== 0) {
+    for (let i=0 ; i < number ; i++) {
+      line += string;
+    }
+  }
+  return line;
+}
+
 //* Begin of tests
 const assert = require('assert');
 

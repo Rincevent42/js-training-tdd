@@ -11,9 +11,25 @@
  */
 
 // Your code:
+function cutFirst (string) {
+  return string.slice(2);
+}
+
+function cutLast (string) {
+  return string.slice(0,-2);
+}
+
+function cutFirstLast (string) {
+  return string.slice(2,-2);
+}
 
 //* Begin of tests
 const assert = require('assert');
-
-assert.fail('You must write your own tests');
+assert.deepStrictEqual(cutFirst('aa'), '');
+assert.deepStrictEqual(cutFirst('The quick brown'), 'e quick brown');
+assert.deepStrictEqual(cutLast('aa'), '');
+assert.deepStrictEqual(cutLast('The quick brown'), 'The quick bro');
+assert.deepStrictEqual(cutFirstLast('1234'), '');
+assert.deepStrictEqual(cutFirstLast('The quick brown'), 'e quick bro');
+//assert.fail('You must write your own tests');
 // End of tests */
