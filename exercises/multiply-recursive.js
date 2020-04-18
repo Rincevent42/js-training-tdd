@@ -10,6 +10,21 @@
  */
 
 // Your code:
+function multiply (arg1, arg2) {
+  let mux = arg1;
+
+  if (arg1 < 0) {
+    mux = -arg1;
+    arg2 = -arg2;
+  }
+
+  if ((arg1 === 0) || (arg2 === 0)) {
+    return 0;
+  } else {
+    return arg2 + multiply(mux - 1, arg2);
+  }
+
+}
 
 //* Begin of tests
 const assert = require('assert');
@@ -29,3 +44,4 @@ assert.strictEqual(multiply(123, -22), -2706);
 assert.strictEqual(multiply(-22, 123), -2706);
 assert.strictEqual(multiply(-22, -123), 2706);
 // End of tests */
+

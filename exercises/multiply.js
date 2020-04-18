@@ -9,8 +9,30 @@
  */
 
 // Your code:
+function multiply (arg1, arg2) {
+  let result = 0;
+  let mux = 0;
 
+  if (arg1 < 0) {
+    mux = -arg1;
+  } else {
+    mux = arg1;
+  }
+
+  if ((mux !== 0) && (arg2 !== 0)) {
+    for (let i = 0; i < mux; i++) {
+      result += arg2;
+    }
+  }
+
+  if (arg1 < 0) {
+    result = -result;
+  }
+  return result;
+
+}
 //* Begin of tests
+
 const assert = require('assert');
 
 assert.strictEqual(typeof multiply, 'function');
@@ -25,4 +47,5 @@ assert.strictEqual(multiply(0, 0), 0);
 assert.strictEqual(multiply(123, -22), -2706);
 assert.strictEqual(multiply(-22, 123), -2706);
 assert.strictEqual(multiply(-22, -123), 2706);
+
 // End of tests */
